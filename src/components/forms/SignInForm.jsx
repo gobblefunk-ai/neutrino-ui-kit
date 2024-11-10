@@ -3,21 +3,21 @@ import PropTypes from 'prop-types';
 
 export const SignInForm = ({ logoSrc, formTitle, formAction }) => {
   return (
-    <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="flex flex-col flex-1 justify-center sm:px-6 lg:px-8 py-12 min-h-full">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <img alt="Your Company" src={logoSrc} className="mx-auto h-10 w-auto" />
-        <h2 className="mt-6 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
+        <img alt="Your Company" src={logoSrc} className="mx-auto w-auto h-10" />
+        <h2 className="mt-6 font-bold text-2xl/9 text-center text-gray-900 tracking-tight">
           {formTitle}
         </h2>
       </div>
 
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
-        <div className="bg-white px-6 py-12 shadow sm:rounded-lg sm:px-12">
+      <div className="sm:mx-auto mt-10 sm:w-full sm:max-w-[480px]">
+        <div className="bg-white shadow px-6 sm:px-12 py-12 sm:rounded-lg">
           <form action={formAction} method="POST" className="space-y-6">
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm/6 font-medium text-gray-900"
+                className="block font-medium text-gray-900 text-sm/6"
               >
                 Email address
               </label>
@@ -28,7 +28,7 @@ export const SignInForm = ({ logoSrc, formTitle, formAction }) => {
                   type="email"
                   required
                   autoComplete="email"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                  className="block border-0 shadow-sm py-1.5 rounded-md ring-1 ring-gray-300 focus:ring-2 focus:ring-indigo-600 ring-inset focus:ring-inset w-full text-gray-900 placeholder:text-gray-400 sm:text-sm/6"
                 />
               </div>
             </div>
@@ -36,7 +36,7 @@ export const SignInForm = ({ logoSrc, formTitle, formAction }) => {
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm/6 font-medium text-gray-900"
+                className="block font-medium text-gray-900 text-sm/6"
               >
                 Password
               </label>
@@ -47,22 +47,22 @@ export const SignInForm = ({ logoSrc, formTitle, formAction }) => {
                   type="password"
                   required
                   autoComplete="current-password"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+                  className="block border-0 shadow-sm py-1.5 rounded-md ring-1 ring-gray-300 focus:ring-2 focus:ring-indigo-600 ring-inset focus:ring-inset w-full text-gray-900 placeholder:text-gray-400 sm:text-sm/6"
                 />
               </div>
             </div>
 
-            <div className="flex items-center justify-between">
+            <div className="flex justify-between items-center">
               <div className="flex items-center">
                 <input
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  className="border-gray-300 rounded focus:ring-indigo-600 w-4 h-4 text-indigo-600"
                 />
                 <label
                   htmlFor="remember-me"
-                  className="ml-3 block text-sm/6 text-gray-900"
+                  className="block ml-3 text-gray-900 text-sm/6"
                 >
                   Remember me
                 </label>
@@ -81,7 +81,7 @@ export const SignInForm = ({ logoSrc, formTitle, formAction }) => {
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex justify-center bg-indigo-600 hover:bg-indigo-500 shadow-sm px-3 py-1.5 rounded-md w-full font-semibold text-sm/6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign in
               </button>
@@ -93,38 +93,38 @@ export const SignInForm = ({ logoSrc, formTitle, formAction }) => {
               aria-hidden="true"
               className="absolute inset-0 flex items-center"
             >
-              <div className="w-full border-t border-gray-200" />
+              <div className="border-gray-200 border-t w-full" />
             </div>
-            <div className="relative flex justify-center text-sm/6 font-medium">
+            <div className="relative flex justify-center font-medium text-sm/6">
               <span className="bg-white px-6 text-gray-900">
                 Or continue with
               </span>
             </div>
           </div>
 
-          <div className="mt-6 grid grid-cols-2 gap-4">
+          <div className="gap-4 grid grid-cols-2 mt-6">
             <a
               href="#"
-              className="flex w-full items-center justify-center gap-3 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:ring-transparent"
+              className="flex justify-center items-center gap-3 bg-white hover:bg-gray-50 shadow-sm px-3 py-2 rounded-md ring-1 ring-gray-300 focus-visible:ring-transparent ring-inset w-full font-semibold text-gray-900 text-sm"
             >
-              <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5">
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="w-5 h-5">
                 <path d="M12.0003 4.75..." fill="#EA4335" />
                 <path d="M23.49 12.275..." fill="#4285F4" />
                 <path d="M5.26498 14.2949..." fill="#FBBC05" />
                 <path d="M12.0004 24.0001..." fill="#34A853" />
               </svg>
-              <span className="text-sm/6 font-semibold">Google</span>
+              <span className="font-semibold text-sm/6">Google</span>
             </a>
 
             <a
               href="#"
-              className="flex w-full items-center justify-center gap-3 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:ring-transparent"
+              className="flex justify-center items-center gap-3 bg-white hover:bg-gray-50 shadow-sm px-3 py-2 rounded-md ring-1 ring-gray-300 focus-visible:ring-transparent ring-inset w-full font-semibold text-gray-900 text-sm"
             >
               <svg
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 aria-hidden="true"
-                className="h-5 w-5 fill-[#24292F]"
+                className="w-5 h-5 fill-[#24292F]"
               >
                 <path
                   d="M10 0C4.477 0 0 4.484..."
@@ -132,11 +132,11 @@ export const SignInForm = ({ logoSrc, formTitle, formAction }) => {
                   fillRule="evenodd"
                 />
               </svg>
-              <span className="text-sm/6 font-semibold">GitHub</span>
+              <span className="font-semibold text-sm/6">GitHub</span>
             </a>
           </div>
 
-          <p className="mt-10 text-center text-sm/6 text-gray-500">
+          <p className="mt-10 text-center text-gray-500 text-sm/6">
             Not a member?{' '}
             <a
               href="#"
@@ -152,7 +152,10 @@ export const SignInForm = ({ logoSrc, formTitle, formAction }) => {
 };
 
 SignInForm.propTypes = {
+  /* This comment should show up as an instruction for this prop in the 'Docs' tab */
   logoSrc: PropTypes.string.isRequired,
+  /* Better double check for typos */
   formTitle: PropTypes.string.isRequired,
+  /* and increase the font-size in your IDE */
   formAction: PropTypes.string.isRequired,
 };

@@ -8,13 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#1D4ED8',
+        primary: '#3021d9',
+        secondary: '#fbfbfc',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-      },
-      spacing: {
-        128: '32rem',
       },
     },
   },

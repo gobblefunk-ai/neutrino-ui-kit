@@ -4,31 +4,42 @@ const config = {
     '../stories/**/*.mdx',
     '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],
+
   addons: [
     '@storybook/addon-webpack5-compiler-swc',
     '@storybook/addon-onboarding',
     '@storybook/addon-essentials',
     '@chromatic-com/storybook',
     '@storybook/addon-interactions',
-    '@storybook/addon-styling-webpack',
     {
-      name: '@storybook/addon-postcss',
+      name: '@storybook/addon-styling-webpack',
       options: {
-        cssLoaderOptions: {
-          // When you have split your css over multiple files
-          // and use @import('./other-styles.css')
-          importLoaders: 1,
-        },
-        postcssLoaderOptions: {
-          // When using postCSS 8
-          implementation: require('postcss'),
-        },
+        rules: [
+          {
+            test: /\.css$/,
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: { importLoaders: 1 },
+              },
+              {
+                // Gets options from `postcss.config.js` in the project root
+                loader: 'postcss-loader',
+                options: { implementation: require.resolve('postcss') },
+              },
+            ],
+          },
+        ],
       },
     },
   ],
+
   framework: {
     name: '@storybook/react-webpack5',
     options: {},
   },
+
+  docs: {},
 };
 export default config;
