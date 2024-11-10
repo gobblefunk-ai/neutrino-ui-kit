@@ -152,10 +152,7 @@ export const SignInForm = ({ logoSrc, formTitle, formAction }) => {
 };
 
 SignInForm.propTypes = {
-  /* This comment should show up as an instruction for this prop in the 'Docs' tab */
   logoSrc: PropTypes.string.isRequired,
-  /* Better double check for typos */
   formTitle: PropTypes.string.isRequired,
-  /* and increase the font-size in your IDE */
   formAction: PropTypes.string.isRequired,
 };
