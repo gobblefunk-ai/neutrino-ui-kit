@@ -2,16 +2,20 @@
   "name": "neutrino-ui-kit",
   "version": "1.0.0",
   "description": "",
-  "main": "",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint 'src/**/*.{js,jsx}' && prettier --check 'src/**/*.{js,jsx,css}'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "webpack"
+    "build": "webpack",
+    "publish": "npm publish"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@heroicons/react": "^2.1.5",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -21,10 +25,11 @@
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
     "@chromatic-com/storybook": "^3.2.2",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.14.0",
     "@storybook/addon-essentials": "^8.4.2",
     "@storybook/addon-interactions": "^8.4.2",
     "@storybook/addon-onboarding": "^8.4.2",
-    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addon-styling-webpack": "^1.0.1",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
     "@storybook/blocks": "^8.4.2",
@@ -37,6 +42,7 @@
     "eslint": "^9.14.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.12.0",
     "postcss": "^8.4.47",
     "postcss-loader": "^8.1.1",
     "prettier": "^3.3.3",
@@ -44,6 +50,7 @@
     "style-loader": "^4.0.0",
     "tailwindcss": "^3.4.14",
     "webpack": "^5.96.1",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^5.1.4",
     "webpack-node-externals": "^3.0.0"
   }
