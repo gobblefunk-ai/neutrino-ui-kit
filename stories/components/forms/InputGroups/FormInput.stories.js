@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FormInput from '../../../src/components/forms/FormInput';
+import FormInput from '../../../../src/components/forms/FormInput';
 import { ExclamationCircleIcon } from '@heroicons/react/20/solid';
 
 export default {

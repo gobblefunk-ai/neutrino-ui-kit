@@ -21,7 +21,6 @@ Container.propTypes = {
   /**
    * `children` is any valid React node that will be rendered inside the container.
    * This can be text, HTML elements, or other React components.
-   * PropTypes.node ensures flexibility by accepting any renderable content.
    */
   children: PropTypes.node,
 };
