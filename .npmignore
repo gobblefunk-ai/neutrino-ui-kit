@@ -2,6 +2,7 @@
 .storybook/
 stories/
 node_modules/
+src/
 .babelrc
 .gitignore
 .prettierrc

@@ -19,6 +19,8 @@ jobs:
         with:
           node-version: '21.6.1'
           cache: 'npm'
+          registry-url: 'https://registry.npmjs.org/'
+          node-auth-token: ${{ secrets.NPM_TOKEN }}
 
       - name: Install Dependencies
         run: npm install
@@ -32,5 +34,3 @@ jobs:
       - name: Publish to npm
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
