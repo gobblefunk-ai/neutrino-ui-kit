@@ -11,8 +11,9 @@ import PropTypes from 'prop-types';
 const SecondaryButton = ({ theme, ...props }) => {
   const secondaryTheme = {
     base: 'font-semibold',
-    background: 'bg-white text-gray-700 ring-1 ring-inset ring-gray-300',
-    hoverBackground: 'hover:bg-gray-200',
+    background:
+      'bg-white text-purple-hyacinth ring-1 ring-inset ring-purple-hyacinth',
+    hoverBackground: 'hover:bg-bleached-silk',
     focusOutline: '',
     rounded: 'rounded-md',
     shadow: 'shadow-sm',

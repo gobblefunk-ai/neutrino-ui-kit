@@ -110,10 +110,10 @@ export const CustomTheme = {
     id: 'customButton',
     theme: {
       base: 'font-semibold',
-      background: 'bg-green-600 text-white',
-      hoverBackground: 'hover:bg-green-500',
+      background: 'bg-megadrive-screen text-white',
+      hoverBackground: 'hover:bg-matt-purple',
       focusOutline:
-        'focus:ring-green-600 focus:outline-none focus:ring-1 focus:ring-offset-1',
+        'focus:ring-matt-purple focus:outline-none focus:ring-2 focus:ring-offset-1',
       rounded: 'rounded-full',
       shadow: 'shadow-sm',
     },

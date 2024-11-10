@@ -81,12 +81,6 @@ TrailingIcon.args = {
   label: 'Trailing Icon Button',
   id: 'trailingIconButton',
   trailingIcon: <ArrowRightIcon className="h-5 w-5" aria-hidden="true" />,
-  theme: {
-    base: 'bg-indigo-600 text-white shadow-sm',
-    hover: 'hover:bg-indigo-500',
-    focus: 'focus:ring-indigo-600',
-    rounded: 'rounded-md',
-  },
 };
 
 export const BothIcons = ButtonTemplate.bind({});
@@ -95,12 +89,6 @@ BothIcons.args = {
   id: 'bothIconsButton',
   leadingIcon: <CheckCircleIcon className="h-5 w-5" aria-hidden="true" />,
   trailingIcon: <ArrowRightIcon className="h-5 w-5" aria-hidden="true" />,
-  theme: {
-    base: 'bg-purple-600 text-white shadow-lg inline-flex items-center gap-x-2',
-    hover: 'hover:bg-purple-500',
-    focus: 'focus:ring-purple-600',
-    rounded: 'rounded-full',
-  },
 };
 
 export const CircularIconButton = IconButtonTemplate.bind({});
@@ -110,10 +98,11 @@ CircularIconButton.args = {
   leadingIcon: <PlusIcon className="h-5 w-5" aria-hidden="true" />,
   iconOnly: true, // Enable icon-only
   theme: {
-    base: 'bg-red-600 text-white shadow-sm',
-    hover: 'hover:bg-red-500',
-    focus: 'focus:ring-red-600',
+    background: 'bg-bright-light-green text-white',
+    hover: 'hover:bg-ragweed',
     rounded: 'rounded-full',
+    focusOutline:
+      'focus:ring-ragweed focus:outline-none focus:ring-2 focus:ring-offset-1',
     additional: 'w-10 h-10', // Fixed width and height for circular shape
   },
 };

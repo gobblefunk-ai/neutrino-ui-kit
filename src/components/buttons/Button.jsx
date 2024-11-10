@@ -55,13 +55,13 @@ const Button = ({
     additional: '',
 
     // Background and text color classes
-    background: 'bg-indigo-600 text-white',
+    background: 'bg-endless-galaxy text-white',
 
     // Shadow effect classes
     shadow: 'shadow-sm',
 
     // Background classes for hover state
-    hoverBackground: 'hover:bg-indigo-500',
+    hoverBackground: 'hover:bg-constellation-blue',
 
     // Outline and ring classes for focus state
     focusOutline:

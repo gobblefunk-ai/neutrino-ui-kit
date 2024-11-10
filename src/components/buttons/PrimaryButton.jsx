@@ -11,10 +11,9 @@ import PropTypes from 'prop-types';
 const PrimaryButton = ({ theme, ...props }) => {
   const primaryTheme = {
     base: 'font-semibold',
-    background: 'bg-primary text-white',
-    hoverBackground: 'hover:bg-primary-dark',
-    focusOutline:
-      'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary',
+    background: 'bg-valhalla text-white',
+    hoverBackground: 'hover:bg-constellation-blue',
+    focusOutline: 'focus:outline-none focus:ring-2 focus:ring-offset-2',
     rounded: 'rounded-md',
     shadow: 'shadow-sm',
   };
