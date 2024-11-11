@@ -1,6 +1,7 @@
 .github/
 .storybook/
 stories/
+storybook-static/
 node_modules/
 src/
 .babelrc

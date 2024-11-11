@@ -31,6 +31,6 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Publish to npm
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: npm publish
+      # - name: Publish to npm
+      #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      #   run: npm publish
