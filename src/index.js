@@ -19,7 +19,7 @@ export { SignInForm } from './components/forms/SignInForm';
 
 export { default as Divider } from './components/layout/Divider';
 
-export { default as LandingPage } from './pages/LandingPage';
+export { LandingPage } from './pages/LandingPage';
 export { default as NotFound } from './pages/NotFound';
 export { default as Pricing } from './pages/Pricing';
 export { default as SettingsScreen } from './pages/SettingsScreen';
