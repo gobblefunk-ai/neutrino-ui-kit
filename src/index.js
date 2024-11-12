@@ -1,3 +1,5 @@
+import './index.css';
+
 export { default as Button } from './components/buttons/Button';
 export { default as PrimaryButton } from './components/buttons/PrimaryButton';
 export { default as SecondaryButton } from './components/buttons/SecondaryButton';
@@ -16,3 +18,10 @@ export { default as FormInput } from './components/forms/FormInput';
 export { SignInForm } from './components/forms/SignInForm';
 
 export { default as Divider } from './components/layout/Divider';
+
+export { default as LandingPage } from './pages/LandingPage';
+export { default as NotFound } from './pages/NotFound';
+export { default as Pricing } from './pages/Pricing';
+export { default as SettingsScreen } from './pages/SettingsScreen';
+export { default as SimpleLandingPage } from './pages/SimpleLandingPage';
+export { default as StackedHomePage } from './pages/StackedHomePage';
