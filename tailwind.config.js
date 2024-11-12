@@ -60,10 +60,8 @@ module.exports = {
         'nano-white': '#F2F0EB',
         'bleached-silk': '#F2F2F2',
       },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-      },
+      fontFamily: {},
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };

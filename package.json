@@ -1,17 +1,15 @@
 {
   "name": "neutrino-ui-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint 'src/**/*.{js,jsx}' && prettier --check 'src/**/*.{js,jsx,css}'",
+    "lint": "eslint '{src,stories}/**/*.{js,jsx}' && prettier --check '{src,stories}/**/*.{js,jsx,css}'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "deploy-storybook": "gh-pages -d storybook-static",
-    "build": "webpack",
-    "publish": "npm publish"
+    "build": "webpack"
   },
   "author": "",
   "repository": {
@@ -20,6 +18,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.1.5",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
@@ -41,6 +40,7 @@
     "@storybook/react": "^8.4.2",
     "@storybook/react-webpack5": "^8.4.2",
     "@storybook/test": "^8.4.2",
+    "@tailwindcss/forms": "^0.5.9",
     "autoprefixer": "^10.4.20",
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
