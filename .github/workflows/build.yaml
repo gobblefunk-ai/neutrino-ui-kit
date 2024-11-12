@@ -1,4 +1,4 @@
-name: Build
+name: Build UI-Kit Modules
 
 on:
   push:
@@ -19,8 +19,6 @@ jobs:
         with:
           node-version: '20.x'
           cache: 'npm'
-          registry-url: 'https://registry.npmjs.org/'
-          node-auth-token: ${{ secrets.NPM_TOKEN }}
 
       - name: Install Dependencies
         run: npm install
