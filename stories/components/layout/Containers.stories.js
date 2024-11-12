@@ -25,7 +25,7 @@ const ConstrainedContainerTemplate = (args) => (
 );
 
 const backgroundFillElement = {
-  children: <div class="h-48 bg-bleached-silk"></div>,
+  children: <div className="h-48 bg-bleached-silk"></div>,
 };
 
 export const Default = DefaultContainerTemplate.bind({});
