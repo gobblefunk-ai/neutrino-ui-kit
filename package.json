@@ -14,6 +14,10 @@
     "publish": "npm publish"
   },
   "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gobblefunk-ai/neutrino-ui-kit"
+  }
   "license": "MIT",
   "dependencies": {
     "@heroicons/react": "^2.1.5",
