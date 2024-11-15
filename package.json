@@ -1,15 +1,17 @@
 {
   "name": "neutrino-ui-kit",
-  "version": "1.1.4",
   "description": "",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "version": "1.1.6",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "style": "dist/styles.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint '{src,stories}/**/*.{js,jsx}' && prettier --check '{src,stories}/**/*.{js,jsx,css}'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "webpack"
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w"
   },
   "author": "",
   "repository": {
@@ -26,11 +28,16 @@
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
+    "@babel/plugin-transform-runtime": "^7.25.9",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
+    "@babel/runtime": "^7.26.0",
     "@chromatic-com/storybook": "^3.2.2",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.14.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
     "@storybook/addon-essentials": "^8.4.2",
     "@storybook/addon-interactions": "^8.4.2",
     "@storybook/addon-onboarding": "^8.4.2",
@@ -48,18 +55,15 @@
     "eslint": "^9.14.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.37.2",
-    "gh-pages": "^6.2.0",
     "globals": "^15.12.0",
-    "mini-css-extract-plugin": "^2.9.2",
     "postcss": "^8.4.47",
     "postcss-loader": "^8.1.1",
     "prettier": "^3.3.3",
+    "rollup": "^4.26.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^8.4.2",
     "style-loader": "^4.0.0",
-    "tailwindcss": "^3.4.14",
-    "webpack": "^5.96.1",
-    "webpack-bundle-analyzer": "^4.10.2",
-    "webpack-cli": "^5.1.4",
-    "webpack-node-externals": "^3.0.0"
+    "tailwindcss": "^3.4.14"
   }
 }
