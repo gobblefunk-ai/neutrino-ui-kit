@@ -1,10 +1,13 @@
 name: Lint
 
 on:
-  push:
-    branches: [main]
   pull_request:
-    branches: [main]
+    branches:
+      - dev
+      - release/*
+      - feature/*
+      - hotfix/*
+      - support/*
   workflow_dispatch:
 
 jobs:
