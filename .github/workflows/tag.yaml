@@ -1,0 +1,50 @@
+name: Create Tag on Release Branch Push
+
+on:
+  push:
+    branches:
+      - 'release/*'
+  workflow_dispatch:
+
+jobs:
+  create-tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Step 2: Extract version number from branch name
+      - name: Extract Version
+        id: extract_version
+        run: |
+          # Extract version from branch name
+          branch_name=${GITHUB_REF#refs/heads/release/}
+          echo "Branch name: $branch_name"
+          echo "version=$branch_name" >> $GITHUB_ENV
+
+      # Step 3: Create and push tag
+      - name: Create and Push Tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Ensure we have a version
+          if [ -z "$version" ]; then
+            echo "Version not found in branch name. Exiting."
+            exit 1
+          fi
+
+          # Check if the tag already exists
+          if git rev-parse -q --verify "refs/tags/$version"; then
+            echo "Tag $version already exists. Skipping tag creation."
+            exit 0
+          fi
+
+          # Create the tag
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a "$version" -m "Release $version"
+
+          # Push the tag
+          git push origin "$version"
