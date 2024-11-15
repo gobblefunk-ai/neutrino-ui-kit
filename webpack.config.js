@@ -1,50 +1,46 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.js', // Entry point of your library
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
     library: {
-      name: 'Neutrino-UI-Kit',
+      name: 'NeutrinoUI', // Shorter library name
       type: 'umd',
     },
+    globalObject: 'this', // Ensures compatibility in different environments
     clean: true,
   },
-  externals: [nodeExternals()],
+  externals: {
+    // Exclude peer dependencies from the bundle
+    react: 'react',
+    'react-dom': 'react-dom',
+  },
   mode: 'production',
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.jsx?$/, // Transpile JS and JSX files
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
       {
-        test: /\.css$/,
+        test: /\.css$/, // Handle CSS files with Tailwind CSS
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx'], // Resolve JS and JSX extensions
   },
   optimization: {
     usedExports: true, // Enables tree shaking
-    splitChunks: {
-      chunks: 'all',
-    },
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles.css',
-    }),
-    new BundleAnalyzerPlugin({
-      analyzerMode: 'disabled',
-      generateStatsFile: true,
+      filename: 'styles.css', // Output CSS file
     }),
   ],
 };
