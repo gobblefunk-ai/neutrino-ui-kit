@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FullWidthContainer from '../containers/FullWidthContainer';
+import FullWidthContainer from '../layout/containers/FullWidthContainer';
 import ResponsiveCard from './ResponsiveCard';
 
 /**
