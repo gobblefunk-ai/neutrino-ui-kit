@@ -10,12 +10,12 @@ export default {
   output: [
     {
       file: 'dist/index.esm.js',
-      format: 'esm', // ES Module format
+      format: 'esm',
       sourcemap: true,
     },
     {
       file: 'dist/index.cjs.js',
-      format: 'cjs', // CommonJS format
+      format: 'cjs',
       sourcemap: true,
       exports: 'named',
     },
@@ -23,7 +23,7 @@ export default {
   plugins: [
     peerDepsExternal(),
     postcss({
-      extract: path.resolve('dist/styles.css'), // Output CSS to 'styles.css'
+      extract: path.resolve('dist/styles.css'),
       minimize: true,
       plugins: [],
     }),
